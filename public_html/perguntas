@@ -1,0 +1,66 @@
+
+------------------------------ Base Campeonato Brasileiro By Uender Carlos-------------------
+
+1 - Quais anos o time X vence;
+	Query:
+	?- campeao(2016, 'Palmeiras'). //O Palmeiras foi campeão em 2016?
+	?- campeao(X, 'Palmeiras'). //Quais Anos o Palmeiras foi Campeão?
+	?- campeao(_,'Palmeiras'). //O Palmeiras já foi campeão?
+
+
+2 - Quais anos o time X foi vice.
+	Query: 
+	?- vice(X, 'Palmeiras'). //Quais Anos o Palmeiras foi Vice?
+	?- vice(_,'Palmeiras'). //O Palmeiras já foi Vice?
+
+
+3 - Qual time foi campeão no Ano X
+	Query:
+	?-campeao(2011, X). //Qual time foi campeão no ano de 2011
+	?-campeao(2017, 'Palmeiras'). //O Palmeiras foi campeão no ano de 2017?
+	
+
+4 - Qual foi o ViceCampeão da campeonato X
+	Query:
+	?- vice(2008, X).//Qual time foi campeão do campeonato de 2008?
+	?- vice(2017, 'Palmeiras'). //A Palmeiras foi vicecampão no campeonato de 2017?
+
+
+5 - Qual estadio sediou a final
+	Query:
+	?- estadio(X, 'Maracana'). //Quais Anos o Maracana Sediou a final do campeonato brasileiro?.
+	?- estadio(2014, 'Maracana'). //O Maracana sediou a final de 2014?
+
+
+6 - Em quais estadios o time X foi campeão
+	Query: 
+	?- timesQueFoiCampeao('Palmeiras', _, X). // Em quais estadios o Palmeiras foi campeao.
+	?- timesQueFoiCampeao('Palmeiras', Y, X). // Em quais estadios o Palmeiras foi campeao e em que ano.
+	?- timesQueFoiCampeao(A, Y, X). // Listando (time campeão, ano e estadio).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

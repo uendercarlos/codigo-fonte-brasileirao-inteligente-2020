@@ -1,0 +1,68 @@
+ 
+			div {background: #ffffee url(index_r1_c1_s1.gif) ;
+				width: 300px;
+				height: 200px;
+				float: left;
+				text-align: center;
+				background-attachment: fixed;
+			}
+			 
+
+
+			body {background-image: url(jequiti.png);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+				
+			}
+
+			.div1 {background: #ffffff url(gif)no-repeat;
+				  background-position: center;
+				  position: absolute;
+				  left:150px;
+				  top: 450px;
+			}
+			
+
+			.div2 {background: #ffffff url(gif)no-repeat;
+				  background-position: center;
+				  position: absolute;
+				  left: 550px;
+				  top: 450px;
+			}	  
+
+			.div3 {background: #ffffff url(gif)no-repeat;
+				  background-position: center;
+				  position: absolute;
+				  left: 1000px;
+				  top: 450px;
+			}
+
+			.div4 {background: #ffffff url(gif)no-repeat;
+				  background-position: center;
+				  position: absolute;
+				  left: 350px;
+				  top: 700px;
+			}
+
+			.div5 {background: #ffffff url(gif)no-repeat;
+				  background-position: center;
+				  position: absolute;
+				  left: 700px;
+				  top: 700px;
+			}
+
+			.div6 {background: #ffffff url(gif)no-repeat;
+				  background-position: center;
+				  position: absolute;
+				  left: 0px;
+				  top: 700px;
+			}
+			
+			.div7 {background: #ffffff url(.gif)no-repeat;
+				  background-position: center;
+				  position: absolute;
+				  left: 10px;
+				  top: 350px;
+			}
+
+	

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Brasileirão</title>
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'> 
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"> 
+  <link href="css/creative.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/tau-prolog.js"></script>
+</head>
+
+<body id="page-top">
+
+  <div id="openModal" style = "display:nome" class="modalDialog">
+    <div class="alert alert-success alert-dismissable">
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Alerta!</h2>
+        <p><b></b> cadastrado(a) com sucesso!</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">CAMPEONATO BRASILEIRO</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Quem somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead"><br><br>
+    <div class="container h-100">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <table align="center">
+            <form id="form" action="processa_livro.php" method="POST">
+              <legend><font color="White">CAMPEÕES</font></legend>
+              <div class="form-group">
+                <select class="form-control" id="perguntas">
+                  <option>Pergunta...</option>
+                  <option>Escolha um time e um ano em que deseja saber se o time campeão</option>
+                  <option>Escolha um time para saber quais anos ele foi campeão</option>
+                  <option>Escolha um time para saber se ele já foi campeão</option>
+                  <option>Escolha um time para saber quais anos ele foi vice campeão</option>
+                  <option>Escolha um time para saber se ele já foi vice campeão</option>
+                  <option>Escolha um ano para saber qual time foi campeão</option>
+                  <option>XXXXXXXXX</option>
+                  <option>Escolha um ano para saber qual time foi vice campeão</option>
+                  <option>Escolha um ano e um time para saber se o time foi vice campeão</option>
+                  <option>Escolha um estadio para saber quais anos ele sediou a final do campeonato brasileiro</option>
+                  <option>Escolha um ano e um estadio para saber se ele sediou a final do do campeonato brasileiro</option>
+                  <option>Escolha um time para saber em quais estadios ele foi campeão</option>
+                  <option>Escolha um time para saber em qual estadio e ano ele foi campeão</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="times">
+                  <option>Time...</option>
+                  <option>Palmeiras</option>
+                  <option>Corinthians</option>
+                  <option>Flamengo</option>
+                  <option>São Paulo</option>
+                  <option>Santos </option>
+                  <option>Cruzeiro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="anos">
+                  <option>Ano...</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                </select>
+              </div>      
+              <div class="form-group">
+                <select class="form-control" id="locais">
+                  <option>Estadio...</option>
+                  <option>Arena Corinthians</option>
+                  <option>Allianz Parque</option>
+                  <option>Maracana</option>
+                  <option>Morumbi</option>
+                  <option>Sao Januario</option>
+                  <option>Barradao</option>
+                  <option>Mineirao</option>
+                </select>
+              </div>   
+              <div class="form-group alignButton">
+                <button type="reset" class="btn btn-secondary btn-block limpar">Limpar Campos</button>
+                <button type="submit" class="btn btn-success btn-block">Consultar</button>
+              </div>
+              <div class="linha"></div>
+              <div class="resutCabecalho">
+                <legend><font color="White">Resultado</font></legend>
+                <button id="btnLimparResultado" class="btn btn-light">Limpar Resultado</button>
+              </div>
+              <div id="painelResposta" class="resutPanel">Faça uma busca</div>
+            </form>		
+          </table>
+        </div>	
+      </div>
+    </div>
+  </header>
+
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2019 - Projeto Prolog</div>
+    </div>
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="js/creative.min.js"></script>
+  <script id="campeonato.pl" type="text/prolog">
+    campeao(2018, 'Palmeiras').
+    campeao(2017, 'Corinthians').
+    campeao(2016, 'Palmeiras').
+    campeao(2015, 'Corinthians').
+    campeao(2014, 'Cruzeiro').
+    campeao(2013, 'Cruzeiro').
+    campeao(2012, 'Fluminense').
+    campeao(2011, 'Corinthians').
+    campeao(2010, 'Fluminense').
+    campeao(2009, 'Flamengo').
+    campeao(2008, 'São Paulo').
+    campeao(2007, 'São Paulo').
+    campeao(2006, 'São Paulo').
+    campeao(2005, 'Corinthians').
+    campeao(2004, 'Santos').
+    campeao(2003, 'Cruzeiro').
+    campeao(2002, 'Santos').
+    campeao(2001, 'Atletico Paranaense').
+    campeao(2000, 'Vasco da Gama').
+
+    vice(2018, 'Flamengo').
+    vice(2017, 'Palmeiras').
+    vice(2016, 'Santos').
+    vice(2015, 'Atletico Mineiro').
+    vice(2014, 'São Paulo').
+    vice(2013, 'Gremio').
+    vice(2012, 'Atletico Mineiro').
+    vice(2011, 'Vasco da Gama').
+    vice(2010, 'Cruzeiro').
+    vice(2009, 'Internacional').
+    vice(2008, 'Gremio').
+    vice(2007, 'Santos').
+    vice(2006, 'Internacional').
+    vice(2005, 'Internacional').
+    vice(2004, 'Atletico Paranaense').
+    vice(2003, 'Santos').l
+    vice(2002, 'Corinthians').
+    vice(2001, 'São Caetano').
+    vice(2000, 'São Caetano').
+
+    estadio(2018, 'Sao Januario').
+    estadio(2017, 'Itaquerão').
+    estadio(2016, 'Allianz Parque').
+    estadio(2015, 'Itaquerão').
+    estadio(2014, 'Mineirao').
+    estadio(2013, 'Barradao').
+    estadio(2012, 'Maracana').
+    estadio(2011, 'Itaquerão').
+    estadio(2010, 'Maracana').
+    estadio(2009, 'Mineirao').
+    estadio(2008, 'Morumbi').
+    estadio(2007, 'Morumbi').
+    estadio(2006, 'Morumbi').
+    estadio(2005, 'Morumbi').
+    estadio(2004, 'Vila belmiro').
+    estadio(2003, 'Mineirao').
+    estadio(2002, 'Vila belmiro').
+    estadio(2001, 'Arena da Baixada').
+    estadio(2000, 'São Januario').
+
+    timesQueFoiCampeao(X, Y, P):-campeao(Y,X), estadio(Y, P).
+  </script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
